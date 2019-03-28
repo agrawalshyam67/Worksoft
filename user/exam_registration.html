@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam Registration</title>
+	<link rel="stylesheet" type="text/css" href="exam_registration.css">
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+	
+      <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+      <a id="nav_text" class="navbar-brand" href="#">WorkSoft</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a id="nav_text" href="#">Home</a></li>
+        <li><a id="nav_text" href="#">About</a></li>
+        <li><a id="nav_text" href="#">Contact</a></li>
+        <li class="dropdown">
+          <a id="nav_text" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Processes <span class="caret"></span></a>
+          <ul class="dropdown-menu navbar-inverse">
+            <li><a id="nav_text" href="#">Process 1</a></li>
+            <li><a id="nav_text" href="#">Process 2</a></li>
+            <li><a id="nav_text" href="#">Process 3</a></li>
+            <li><a id="nav_text" href="#">Process 4</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+			<li><input class="searchbox" type="text" placeholder="Search" aria-label="Search"></li>
+		</ul>
+
+    </div>
+   </div>  	
+</nav>
+<div class="col-md-2">
+</div>
+
+<div class="containers sub col-md-8">
+
+							<div class="button">
+							
+							<center>
+                                <button id="resume">
+                                       Resume Process                                    
+                                </button>
+                            	<br>
+                                <button id="reset">
+                                       Reset Process                                   
+                                </button>
+                                </center>
+                            </div>
+ <div class="subjects">                           
+
+<div>
+<h1>Step 1: Search for Subjects</h1>
+<h2>WINTER SEMESTER 2019/2020
+</h2>
+</div>
+
+<div>
+<table class="sub_table">
+  <tr>
+  	  <th rowspan="3"><img class="sub_img" src="subject images/sse.png"></th>
+    <td><a class="subj" href="#register"><u>Software Service Engineering</u></a></td>
+  </tr>
+  <tr>
+    <td><i>Former:</i> Protocols of Distributed Systems <br>
+    Recently, computer and communication networks have developed into an efficient work tool, a universal source of information and a nearly ubiquitous communication medium. Basic approaches, concepts and principles of modern communication and computer networks will be explored in-depth.</td>
+  </tr>
+  <tr>
+    <td><b>Exam Date:</b> 12/03/2020,<br><b>Time and Room Number:</b> Friday, 11:30 - 13:00, 1/204
+
+</td>
+
+  </tr>
+</table>
+	<table class="sub_table">
+  <tr>
+  	  <th rowspan="3"><img class="sub_img" src="subject images/evs.png"></th>
+    <td><a class="subj" href="#register"><u>Design of Distributed Systems</u></a></td>
+  </tr>
+  <tr>
+    <td>The course provides an introduction to the "Web phenomenon" and development of distributed applications and systems. The focus here lies on the development process and evolution, i.e. the continuous development of the underlying requirements, architectures and technologies.</td>
+  </tr>
+  <tr>
+  	<td><b>Exam Date:</b> 25/03/2020,<br><b>Time and Room Number:</b> Friday, 07:30 - 09:00, 1/273</td>
+
+  </tr>
+</table>
+
+</table>
+	<table class="sub_table">
+  <tr>
+  	  <th rowspan="3"><img class="sub_img" src="subject images/ctwe.png"></th>
+    <td><a class="subj" href="#register"><u>Current Trends in Web Engineering</u></a>
+</td>
+  </tr>
+ 
+  <tr>
+    <td><i>Former:</i> Social Media & Web Science/Architecture of Distributed Systems <br>
+Social media and social networks in the sense of cross-border networks change our perception of communication structures and induce social, economic and political changes. The module explores the basic aspects of social networks and social media as well as web science. Architectural aspects, system theory and emergence-related phenomena such as self-organisation will be covered.</td>
+  </tr>
+  <tr>
+    <td><b>Exam Date:</b> 16/03/2020,<br><b>Time and Room Number:</b> Monday, 15:30 - 17:00, 1/375
+
+
+</td>
+
+  </tr>
+</table>
+
+</table>
+	<table class="sub_table">
+  <tr>
+  	  <th rowspan="3"><img class="sub_img" src="subject images/xml.png"></th>
+    <td><a class="subj" href="#register"><u>XML</u></a></td>
+  </tr>
+  <tr>
+    <td>
+Former: XML Tools <br>
+eXtensible Markup Language (XML) is the basis of a number of developments in the World Wide Web. The course provides a basic introduction to XML and its applications in different contexts of distributed systems.
+
+</td>
+  </tr>
+  <tr>
+    <td><b>Exam Date:</b> 21/03/2020,<br><b>Time and Room Number:</b> Monday, 15:30 - 17:00, 1/375</td>
+
+  </tr>
+</table>
+
+</div>
+</div>
+
+<div class="register">
+	<h1>Step 2: Register for Exam</h1>
+
+	<button id="reg">Register for selected subject</button>
+	
+</div>
+<div class="succes">
+	<h1>Step 3: Registration Successfull</h1>
+
+	<p>Subject Successfully Registered</p>
+</div>
+
+</div>
+
+<div class="col-md-2">
+</div>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="exam_registration.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <title>Controller</title>
+        <meta name="description" content="camunda">   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style type="text/css">
+    	body{ font-family: "Times New Roman", Times, serif;
+    			font-size: 30px;
+    			color: SlateBlue;
+    			font-weight: bold;
+    		 }
+    	#status { font-size: 50px; }
+    </style>
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">Controller / Admin - Exam Register Process</span>
+        </nav>
+        <br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-4">
+				<div align="center">
+					
+					<button class="btn btn-danger" id="startBTN"> Start Process Initially </button>	
+					<p style="color:red;">! Achtung. </p>
+				</div>
+				<br><br>
+				
+				
+			</div>
+
+			<div class="col-4" align="center">
+				
+				<button id="getStatus" class="btn btn-success">Get Current Status</button>
+			</div>
+
+			<div class="col-4">
+				
+				<div align="center">
+					<button id="Subject" class="btn btn-info"> Complete the Process </button>
+				</div>
+				
+				
+
+				
+			</div>
+
+
+		</div>	
+		<div class="row">
+			<div class="col-12">
+				<div id="status" class="statusCurr" align="center">
+					
+				</div>
+			</div>
+		</div>	
+			
+
+			<!-- <div class="status">
+			
+				<div >
+					<div id="status"></div>
+					<button class="Btn" id="clsPro">Close the Process</button>
+				</div>
+		
+			</div> -->
+
+		
+
+
+		
+	</div>
+
+
+
+
+
+	<script>    
+    
+        
+    window.onload = function()
+    {	
+    	var processID;
+    	var disBtn;
+
+    	document.getElementById("startBTN").addEventListener('click', startPro);
+    	document.getElementById("getStatus").addEventListener('click', currentStatus);
+    	document.getElementById("Subject").addEventListener('click', regSubject);
+    	//document.getElementById("clsPro").addEventListener('click', clsPro);
+    	currentStatus();
+
+    	function startPro()
+    	{
+    		var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                    if(this.readyState==4 && this.status==200)
+                    {    
+                         document.getElementById("startBTN").disabled = true;
+                         console.log('Process Started');
+                         currentStatus();
+                                                  
+                       
+                    }  
+                }
+                xhttp.open('POST', 'http://145.14.157.100:8080/engine-rest/process-definition/key/Exam/start', true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send();
+
+    	} 
+
+    	function currentStatus()
+    	{
+    		var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                    if(this.readyState==4 && this.status==200)
+                    {    
+                         
+                        //document.getElementById("demo").innerHTML = this.responseText;
+                        var result = JSON.parse(this.responseText);
+                        console.log(result);
+                        
+                       	
+                        //console.log(processID);
+                        //console.log(result[0].name);
+
+                        if(result === undefined || result.length == 0)
+                        {
+                        	document.getElementById("startBTN").disabled = false;
+                    	 	document.getElementById("status").innerHTML = "No Process Exists";
+                        }
+                        else
+                        {
+                        	document.getElementById("startBTN").disabled = true;
+                        	document.getElementById("status").innerHTML = result[0].name
+                        	processID = result[0].id;
+                        }
+                        
+                      
+                    }  
+                }
+               
+                xhttp.open('GET', 'http://145.14.157.100:8080/engine-rest/task?processDefinitionKey=Exam', true);
+                xhttp.send();
+    	}
+
+    	function regSubject()
+    	{	
+    		var data = JSON.stringify({"variables" : {"status" : {"value": "invalid"}	}});
+    		var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                    if(this.readyState==4 && this.status==204)
+                    {    
+                        
+                       console.log('Process Completed');
+                        // document.getElementById("Subject").disabled = true;
+                        currentStatus();
+
+
+                       
+                    }  
+                    // elseif(this.status==500)
+                    // {
+                    // 	document.getElementById("startBTN").disabled = false;
+                    // 	document.getElementById("status").innerHTML = "";
+                    // }
+                }
+                //var url = 'http://145.14.157.100:8080/engine-rest/task/'+processID+'/complete';
+                xhttp.open('POST', 'http://145.14.157.100:8080/engine-rest/task/'+processID+'/complete', true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send(data);
+
+    	}
+
+    	function clsPro()
+    	{
+
+    		var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function()
+                {
+                    if(this.readyState==4 && this.status==204)
+                    {    
+                        
+                       console.log('Process Closed');
+                       document.getElementById("startBTN").disabled = false;
+                       currentStatus();
+                    }  
+                }
+                var url = 'http://145.14.157.100:8080/engine-rest/task/' + processID +'/complete';
+                xhttp.open('POST', 'http://145.14.157.100:8080/engine-rest/task/' + processID +'/complete', true);
+                xhttp.setRequestHeader("Content-type", "application/json");
+                xhttp.send();
+    	}
+
+
+
+
+    }
+         
+            
+    </script>
+
+</body>
+</html>

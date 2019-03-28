@@ -1,0 +1,120 @@
+body {
+   background-color: red; /* For browsers that do not support gradients */
+
+  background-image: linear-gradient(#Fec503, #Fec503); /* Standard syntax (must be last) */
+}
+
+.containers {
+    position: fixed;
+    width: 500px;
+    height: 865px;
+    margin: 10px;
+    background-color: #333;
+    border-radius: 3px;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  
+}
+
+.navbar {
+  min-height: 80px;
+}
+
+#nav_text
+{
+  color: #Fec503;  
+}
+.navbar_text:hover
+{
+  background-color: #fff;
+}
+
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+ 
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+   .navbar-nav > li > a {
+   
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+
+.searchbox
+{
+  margin: 10px;
+
+}
+
+#firstcoln
+{
+  height: 100%;
+}
+
+
+.sub_img
+{
+  padding-right: 20px;
+  width: 120px;
+  max-height: 150px;
+}
+.sub
+{
+  width: 1200px;
+}
+ .sub_table
+ {
+  margin: 20px;   
+ }
+
+div 
+{
+  color: white;
+}
+.subjects, .register, .succes
+{
+    display: none;
+}
+.button
+{
+  margin-top: 100px;
+
+  position: relative;
+  
+ }
+.register
+{
+    position: relative;
+
+}
+
+#reset, #resume
+{ 
+  color: #Fec503;
+  background-color: #333;
+  font-size: 28px;
+  border: 0px;
+  width: 250px;
+  margin: 10px;
+}
+#reg
+{ 
+  position: relative;
+  color: #Fec503;
+  background-color: #333;
+  font-size: 28px;
+  border: 0px;
+  width: 500px;
+  margin: 10px;
+}

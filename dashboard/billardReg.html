@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Worksoft - Register</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		
+		<!--Theme-->
+		<link href="css/theme-default.css" rel="stylesheet">
+		
+		<!--Custom Font-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		    /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  z-index: 1; /* Sit on top */
+                  left: 0;
+                  top: 0;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: rgb(0,0,0); /* Fallback color */
+                  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                }
+                
+                /* Modal Content/Box */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: 15% auto; /* 15% from the top and centered */
+                  padding: 20px;
+                  border: 1px solid #888;
+                  width: 80%; /* Could be more or less, depending on screen size */
+                }
+                
+                /* The Close Button */
+                .close {
+                  color: #aaa;
+                  float: right;
+                  font-size: 28px;
+                  font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                  color: black;
+                  text-decoration: none;
+                  cursor: pointer;
+                }
+		</style>
+	</head>
+	<body>
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    
+                    <a class="navbar-brand" href="#"><span>Work</span>Soft</a>
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        <br>
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+				<div class="login-panel panel panel-default">
+					<div class="panel-heading">Register Here</div>
+					<div class="panel-body">
+						<form role="form"  method="post" id="registerForm" action="billardReg.php">
+							<fieldset>
+								<div class="form-group">
+                                            <label class="sr-only" for="fname">First Player</label>
+                                            <input type="text" name="fname" placeholder="First Player" class="form-first-name form-control" id="fname" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="lname">Second Player (optional)</label>
+                                            <input type="text" name="lname" placeholder="Second Player (optional)" class="form-last-name form-control" id="lname">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="sr-only" for="team">Team Name</label>
+                                            <input type="text" name="team" placeholder="Team Name" class="form-email form-control" id="team">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="sr-only" for="email">Email</label>
+                                            <input type="email" name="email" placeholder="Email" class="form-email form-control" id="email" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label class="sr-only" for="team">Phone</label>
+                                            <input type="tel" name="phone" placeholder="Phone number" class="form-email form-control" id="phone" required>
+                                        </div>
+                                        
+                                          <input type="checkbox"  name="terms" required><span> I accept the <span id="tm"><u>Terms and Conditions</u></span></span>
+                                        <br><br>
+                                        <button type="submit" class="btn btn-primary"  >Submit</button>
+                                        
+								<!-- <div class="text-center">
+									<a href="index.html" class="btn btn-lg btn-primary">Login</a> id="registerBtn"
+								</div> -->
+							</fieldset>	
+						</form>
+						
+						<!-- The Modal -->
+                            <div id="myModal" class="modal">
+                            
+                              <!-- Modal content -->
+                              <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>All the contents, logo and other visual media created in MeetyourIT is our
+                                    property and is protected by copyright law.</p><br>
+                                <p>The event venue possesses the valuable material that has been provided to us
+                                    for the tournament. Any kind of damage of BOWLING-TREFF’s property done
+                                    by any individual player or team will be bear by that player. MeetyourIT will not
+                                    be responsible for any kind of such expense.</p><br>
+                                <p>Access to our website through a user account can be terminated in case of
+                                    abuses or at our sole discretion.</p><br>
+                                <p>Players will be courteous to one another and will not engage in bad-mouthing
+                                or have a negative attitude. In case of any involvement in such activity, player will
+                                be disqualified from the tournament.</p><br>
+                                <p>Your personal information will never be passed onto third parties without
+                                written prior consent.</p><br>
+                                <p>Player warrants that he is physically fit and able to engage in a fitness and/or
+                                exercise program.</p><br>
+                                <p>I HAVE READ THIS AGREEMENT AND FULLY UNDERSTAND ITS TERMS.
+                                I AM AWARE THAT THIS AGREEMENT INCLUDES A RELEASE AND
+                                WAIVER OF LIABILITY AND AN ASSUMPTION OF RISK. I UNDERSTAND I
+                                HAVE GIVEN UP SUBSTANTIAL RIGHTS BY SIGNING THIS AGREEMENT,
+                                AND I SIGN IT FREELY AND VOLUNTARILY WITHOUT ANY
+                                INDUCEMENT. BY CHECKING THE BOX WHEN I ORDER A TICKET, I AM
+                                AGREEING TO BE BOUND BY THIS AGREEMENT.</p><br>
+                              </div>
+                            
+                            </div>
+						<div>
+                                         
+                        </div>
+					</div>
+				</div>
+			</div><!-- /.col-->
+		</div><!-- /.row -->	
+	
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			    
+   			 window.onload = function()
+   			 {
+       			 var modal = document.getElementById('myModal');
+                 var btn = document.getElementById('tm');
+                 var span = document.getElementsByClassName("close")[0];
+                 
+                 btn.onclick = function() {
+                      modal.style.display = "block";
+                    }
+                
+                 span.onclick = function() {
+                      modal.style.display = "none";
+                    }
+                    
+                 window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  } }
+   			 }
+		</script>
+	</body>
+</html>
