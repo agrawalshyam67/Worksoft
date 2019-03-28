@@ -1,75 +1,57 @@
-# [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
+## Introduction
+The ideation and implementation of the idea to build a startup and proffering it to the real industry
+is carried out in the Planspiel project under the Faculty of Computer Science – Technische
+Universität, Chemnitz. The whole work structure of Planspiel is interesting as it empowers an
+individual with entrepreneurship abilities. It makes learning fun as it puts students into the
+corporate shoes and makes them strong in both management and technical aspect of building a
+prosperous and dwelling IT company in the upcoming future.
+The workflow of Planspiel contains various challenging activities like team building, creation of
+team website, creating a logo for the team which accurately resembles the characteristics of team
+and its aim followed by various managerial and technical activities which at the end will result in
+a unique product development experience for each individual of the team in a different manner
+and allow each individual to polish their existing knowledge and also acquire new during this
+entire Planspiel phase.
 
-[Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
+## Problem Statement
+A student who is pursuing a master program from the university, he or she needs to acquire
+sublime knowledge of the processes well as the procedures related to the program. One of the
+most important segment of this program is Master Thesis. The main focus of the thesis is that a
+student should be able to think scientifically and technically on the topic being assigned as a
+part of the program.
+The problem arises when the student comes across new queries related to decisions on methods,
+implementation of solution to the problems and formulation.
+In order to make the process easy and hassle free, certain workflow or diagram needs to be
+developed which in turn could help the students taking the decision wisely. We will generalize
+the process with the help of detailed instructions in the form of BPMN (business process model
+and notation), optimize the queries in the current workflow and find out the process that can be
+automated, which helps the student to successfully enroll in master thesis program. Similarly,
+there are various other important workflows or processes in the university the student finds
+difficult to understand when he/she enter fresh into any of the university program. Our system
+not only focuses on the Thesis workflow but also other simple or complex workflows of the
+university which help the user tackle these kind of problems arriving in daily life.
+For our system as mentioned earlier the prime focus being the Thesis workflow we concentrate
+on other workflows too like Subject Enrollment, Exam Registration, Library System. These are
+the most common workflows among any group of users and are not limited to any department
+or course in the university. These systems and there BPMN model will be well defined in our
+product description where we will provide a detailed view of how and what problems our
+product addresses.
 
-## Preview
-
-[![Agency Preview](https://startbootstrap.com/assets/img/templates/agency.jpg)](https://blackrockdigital.github.io/startbootstrap-agency/)
-
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-agency/)**
-
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-agency.svg)](https://www.npmjs.com/package/startbootstrap-agency)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-agency.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-agency)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-agency/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-agency?type=dev)
-
-## Download and Installation
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/agency/)
-* Install via npm: `npm i startbootstrap-agency`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-agency.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-agency)
-
-## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-#### Gulp Tasks
-
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm and Gulp installed globally on your machine in order to use these features.
-
-## Troubleshooting and Help
-
-Start Bootstrap has a public Slack channel which is a great place to ask questions about this template and all things related to Start Bootstrap.
-
-**[Click here to join the Slack channel!](https://startbootstrap-slack.herokuapp.com/)**
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-agency/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/agency/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-agency/blob/gh-pages/LICENSE) license.
-"# Worksoft_meetyourIT" 
+## WorkSoft: Meet your workflow software
+WorkSoft is a child of meetyourIT solutions available on our website. It is a client side frontend
+web-based software system running to solve issues related to business workflows. This software
+is currently in its development phase and working on an university problem statement. Current
+operations being implemented include optimizations and simplification of university’s common
+student related workflows like Thesis Project, Exam Registration, Subject Registration, Library
+system and etc. The main idea behind this system is that both type of users in an university i.e. the
+students as well as the professors can have an easy access to information related to any of these
+flows and can keep a track of their progress in any particular workflow. On the other hand the
+professors can have information available on their end about the students and their associated
+workflows, keeping track of students’ progress, have tabular information helping the professors
+to have a pre-sorted view of categorized information. This systems will work in accordance with
+our values we promise to provide to our customers i.e. this workflow software system will be a
+win-win situation for both the parties working with our system. The students will have a single
+place where they can have their progress efficiently tracked and also selection of multiple
+workflow choices between all simple or complex processes he/she has to undergo in the entire
+curriculum of university degree program. Similarly, the professors can also have one place where
+they can have all necessary information of students available and allowing professor to have
+control over the progress of students and administrative control over student workflows. 
